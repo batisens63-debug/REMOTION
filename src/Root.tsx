@@ -4,6 +4,7 @@ import { Logo } from "./HelloWorld/Logo";
 import { Title } from "./HelloWorld/Title";
 import { BuildingAd, buildingAdSchema } from "./Building/BuildingAd";
 import { DURATION, FPS } from "./Building/scene";
+import { DOME_DURATION, DomeShowreel, domeSchema } from "./Dome/DomeShowreel";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -23,6 +24,21 @@ export const RemotionRoot: React.FC = () => {
           tagline: "Construire durable, comprendre son bâtiment",
           website: "www.batisens.fr",
           accentColor: "#ef5a3c",
+        }}
+      />
+      <Composition
+        id="DomeMotionShowreel"
+        component={DomeShowreel}
+        durationInFrames={DOME_DURATION}
+        fps={30}
+        width={1920}
+        height={1080}
+        schema={domeSchema}
+        defaultProps={{
+          instagram: "@domemotion",
+          website: "www.domemotion.fr",
+          showSubtitles: true,
+          withVoice: false,
         }}
       />
       <Folder name="Elements">
